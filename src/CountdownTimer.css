@@ -1,0 +1,81 @@
+/* CountdownTimer.css */
+
+/* Animation for the running background */
+@keyframes run-animation {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 100% 0;
+    }
+  }
+  
+  /* Style for the countdown timer container */
+  .countdown-timer {
+    text-align: center;
+  }
+  
+  /* Style for the form containing the input fields and buttons */
+  .countdown-timer form {
+    margin-bottom: 20px;
+  }
+  
+  /* Style for the input fields */
+  .countdown-timer input[type="number"] {
+    width: 50px;
+    margin: 0 5px;
+    text-align: center;
+  }
+  
+  /* Style for the colon separator */
+  .countdown-timer span {
+    margin: 0 5px;
+    font-size: 20px;
+  }
+  
+  /* Style for the buttons */
+  .countdown-timer button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .countdown-timer button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .countdown-timer button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Style for the time remaining display */
+  .countdown-timer .time-remaining {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  /* Style for the running and stopped background */
+  .running {
+    animation: run-animation 10s infinite linear;
+    background-image: url('https://i.pinimg.com/originals/fa/8f/57/fa8f575da22579f82e3a2ce8535d46d5.gif'); /* Replace 'running.gif' with the URL of your running GIF */
+    background-size: contain; /* Ensure the GIF fits within the body element */
+    background-repeat: no-repeat; /* Prevent the GIF from repeating */
+  }
+  
+  .stopped {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://clipart-library.com/images/kcKoxXz7i.gif'); /* Replace 'stopped.gif' with the URL of your stopped GIF */
+    background-size: contain; /* Ensure the GIF fits within the body element */
+    background-repeat: no-repeat; /* Prevent the GIF from repeating */
+    height: 100vh; /* Make the stopped GIF cover the entire viewport height */
+  }
+  
+  /* Additional styles as needed */
+  
