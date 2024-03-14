@@ -1,5 +1,6 @@
 import React from 'react';
 import './CountdownTimer.css';
+// import { Dhandle } from './Dhandle.jsx'
 
 class CountdownTimer extends React.Component {
   constructor(props) {
@@ -29,7 +30,7 @@ class CountdownTimer extends React.Component {
           intervalId,
           timerRunning: true,
         });
-        document.body.classList.add('running'); // Add the running class to the body
+        document.body.classList.add('running');
       }
     }
   };
@@ -39,7 +40,7 @@ class CountdownTimer extends React.Component {
     if (seconds === 0 && minutes === 0) {
       clearInterval(this.state.intervalId);
       this.setState({ timerRunning: false });
-      document.body.classList.remove('running'); // Remove the running class from the body
+      document.body.classList.remove('running');
       return;
     }
     const updatedSeconds = seconds === 0 ? 59 : seconds - 1;
@@ -86,10 +87,10 @@ class CountdownTimer extends React.Component {
             onChange={this.handleChange}
             disabled={timerRunning}
           />
-          <button type="submit" disabled={timerRunning} class="btn btn-outline-success">
+          <button type="submit" disabled={timerRunning} className="btn btn-outline-success">
             Start
           </button>
-          <button type="button" onClick={this.handleStop} disabled={!timerRunning} class="btn btn-outline-danger">
+          <button type="button" onClick={this.handleStop} disabled={!timerRunning} className="btn btn-outline-danger">
             Stop
           </button>
         </form>
